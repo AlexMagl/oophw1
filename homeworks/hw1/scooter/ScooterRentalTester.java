@@ -35,7 +35,7 @@ public class ScooterRentalTester {
         // Wait for 1 hour
         // To test the program, feel free to lower the value inside the parentheses of Thread.sleep
         try {
-            Thread.sleep(360); // Sleep for 1 hour (1 hour = 3600000 milliseconds)
+            Thread.sleep(3600000); // Sleep for 1 hour (1 hour = 3600000 milliseconds)
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
