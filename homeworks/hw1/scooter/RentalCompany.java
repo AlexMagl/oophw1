@@ -3,10 +3,7 @@ package homeworks.hw1.scooter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RentalCompany {
-
-    private int uid = 0;
-
+public class RentalCompany extends Scooter { // Subclass of Scooter to not create same variables again and again
     List<Scooter> scooters = new ArrayList<>();
 
     // Method to get a list of available scooters
@@ -24,7 +21,7 @@ public class RentalCompany {
     // Method to add a scooter to the rental company
     // @param scooter The scooter to be added
     public void addScooter(Scooter scooter) {
-        scooter.setId(uid++); // Assign a unique ID to the scooter
+        scooter.setId(id++); // Assign a unique ID to the scooter
         scooters.add(scooter); // Add the scooter to the list of scooters
     }
 
@@ -49,10 +46,11 @@ public class RentalCompany {
         for (Scooter scooter : scooters) {
             if (scooter.getId() == id && scooter.isAvailable()) {
                 scooter.setAvailable(false); // Mark the scooter as not available after renting
-                System.out.println("Scooter with ID " + id + " has been rented.");
+                // Print a message indicating whether the rent was successful or not (due to the scooter not being available)
+                System.out.println("Scooter '" + scooter.getModel() + "' with ID " + id + " has been rented.");
                 break;
             } else {
-                System.out.println("Scooter with ID " + id + " is not available.");
+                System.out.println("Scooter '" + scooter.getModel() + "' with ID " + id + " is not available.");
             }
         }
     }
@@ -68,7 +66,7 @@ public class RentalCompany {
         for (Scooter scooter : scooters) {
             if (scooter.getId() == id && !scooter.isAvailable()) {
                 scooter.setAvailable(true); // Mark the scooter as available after returning
-                System.out.println("Scooter with ID " + id + " has been returned.");
+                System.out.println("Scooter '" + scooter.getModel() + "' with ID " + id + " has been returned at coordinates x:'" + x + "' and y:'" + y + "'.");
                 break;
             }
         }

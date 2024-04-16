@@ -3,7 +3,7 @@ package homeworks.hw1.scooter;
 public class Scooter {
 
     // Unique identifier for the scooter.
-    int id;
+    protected int id;
 
     // Model name of the scooter (e.g., Sparrow X10).
     String model;

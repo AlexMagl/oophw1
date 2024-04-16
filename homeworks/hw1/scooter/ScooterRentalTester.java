@@ -32,9 +32,10 @@ public class ScooterRentalTester {
         // Leave the scooter at the University
         company.returnScooter(scooter1.getId(), 41.7121106, 44.7489232);
 
-        // Wait for 1 hour; To test the program, feel free to lower the value inside the parentheses
+        // Wait for 1 hour
+        // To test the program, feel free to lower the value inside the parentheses of Thread.sleep
         try {
-            Thread.sleep(3600000); // Sleep for 1 hour (1 hour = 3600000 milliseconds)
+            Thread.sleep(360); // Sleep for 1 hour (1 hour = 3600000 milliseconds)
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
